@@ -1,4 +1,4 @@
-package com.multicampus.sample.mapper;
+package com.multicampus.springex.mapper;
 
 import org.apache.ibatis.annotations.Select;
 

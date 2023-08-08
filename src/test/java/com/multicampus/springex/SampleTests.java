@@ -1,6 +1,6 @@
-package com.multicampus.sample;
+package com.multicampus.springex;
 
-import com.multicampus.sample.sample.SampleService;
+import com.multicampus.springex.sample.SampleService;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

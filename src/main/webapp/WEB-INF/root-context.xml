@@ -28,11 +28,13 @@ http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-sprin
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:/mappers/**/*.xml" />
+        <!--mappers에있는 모든 파일 .xml이름인 쿼리문 실행해서 결과갑 가져와라-->
     </bean>
     <!-- dataSource 의 데이터를 sqlSessionFactory 에 저장    -->
 
 
-    <context:component-scan base-package="com.multicampus.sample"/>
-    <mybatis:scan base-package="com.multicampus.sample.mapper"/>
+    <context:component-scan base-package="com.multicampus.springex"/>
+    <mybatis:scan base-package="com.multicampus.springex.mapper"/> <!--요청이오면 실행시켜줘라-->
 
 </beans>
