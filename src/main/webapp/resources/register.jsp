@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,8 +52,8 @@
                                </div>
 
                                <div class="input-group mb-3">
-                                   <span class="input-group-text">Writer</span>
-                                   <input type="text" name="writer" class="form-control" placeholder="Writer">
+                                   <span class="input-group-text">Title</span>
+                                   <input type="text" name="title" class="form-control" placeholder="Writer">
                                </div>
 
                                <div class="my-4">
@@ -63,14 +62,9 @@
                                        <button type="reset" class="btn btn-secondary">Reset</button>
                                    </div>
                                </div>
+
+
                            </form>
-                           <script>
-                               const serverValidResult = {}
-                               <c:forEach items="${errors}" var="error">
-                               serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
-                               </c:forEach>
-                               console.log(serverValidResult)
-                           </script>
 
 
                        </div>

@@ -1,8 +1,5 @@
-package com.multicampus.mapper;
+package com.multicampus.springex.mapper;
 
-import com.multicampus.springex.mapper.TimeMapper;
-import com.multicampus.springex.mapper.TimeMapper2;
-import com.multicampus.springex.mapper.TodoMapper;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,14 +10,19 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @Log4j2
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/root-context.xml")
-public class TodoMapperTests {
+public class TimeMapperTests {
     @Autowired(required = false)
-    private TodoMapper todoMapper;
-
+    private TimeMapper timeMapper;
+    @Autowired(required = false)
+    private TimeMapper2 timeMapper2;
 
     @Test
     public  void testGetTime(){
-        log.info(todoMapper.getTime());
+        log.info(timeMapper.getTime());
+    }
+
+    @Test
+    public  void testGetNow(){
+        log.info(timeMapper2.getNow());
     }
 }
-//4.테스트코드 개발
