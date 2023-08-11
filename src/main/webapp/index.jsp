@@ -6,7 +6,8 @@
 </head>
 <body>
 
-<br/>
-<a href="/todo/register"><h1>글쓰러가기</h1></a>
+<h1 align="center">
+<a href="/todo/register">Todo글 작성하러 가기</a>
+</h1>
 </body>
 </html>

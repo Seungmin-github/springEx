@@ -2,6 +2,8 @@ package com.multicampus.springex.service;
 
 
 import com.multicampus.springex.domain.TodoVO;
+import com.multicampus.springex.dto.PageRequestDTO;
+import com.multicampus.springex.dto.PageResponseDTO;
 import com.multicampus.springex.dto.TodoDTO;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -21,7 +23,7 @@ public class TodoServiceTests {
     private TodoService todoService;
 
     @Test
-    public void testRegister(){
+    public void testRegister() {
         TodoDTO todoDTO = TodoDTO.builder()
                 .title("Test Todo 1")
                 .dueDate(LocalDate.now())
@@ -30,4 +32,5 @@ public class TodoServiceTests {
         todoService.register(todoDTO);
 
     }
+
 }
